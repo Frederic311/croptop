@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    position: relative;
+    background: url(../../../../public/images/bg1.jpeg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    z-index: 1;
+}
+
+.navbar {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.navbar .logo {
+    width: 140px;
+    height: auto;
+    padding: 20px;
+}
+
+.center {
+    font-family: sans-serif;
+    user-select: none;
+    padding: 20px;
+    z-index: 2;
+    position: relative;
+}
+
+.center h1, .center h2 {
+    color: white;
+    font-size: 4vw; /* Decreased font size */
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons button {
+    height: 50px;
+    width: 150px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    background: red;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #cc0000;
+    border-radius: 5px;
+    transition: .4s;
+}
+
+.buttons .btn2 {
+    margin-left: 25px;
+}
+
+.buttons button:hover {
+    background: #cc0000;
+}
+
+@media (max-width: 768px) {
+    .center h1, .center h2 {
+        font-size: 6vw; /* Decreased font size */
+    }
+
+    .buttons button {
+        width: 120px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .center h1, .center h2 {
+        font-size: 8vw; /* Decreased font size */
+    }
+
+    .buttons button {
+        width: 100px;
+        height: 35px;
+        font-size: 14px;
+    }
+}

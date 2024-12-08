@@ -1,0 +1,19 @@
+<div class="login-page">
+    <div class="login-container">
+      <img alt="logo" class="logo" src="assets/logo.svg">
+      <h2>Welcome Back</h2>
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" [(ngModel)]="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" [(ngModel)]="password" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+      <p class="link">Don't have an account? <a routerLink="/signup" (click)="navigateToSignup()">Sign Up</a></p>
+    </div>
+    <p-toast></p-toast>
+  </div>

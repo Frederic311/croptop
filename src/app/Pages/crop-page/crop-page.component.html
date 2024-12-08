@@ -1,0 +1,12 @@
+<div class="crop-list-header">
+  <h1>Crops</h1>
+  <button class="btn btn-success" [routerLink]="'/crop-form'">Add Crop</button>
+</div>
+
+<div class="crop-list">
+    <div *ngFor="let crop of crops" class="crop-item">
+      <app-crop-card [crop]="crop"></app-crop-card>
+      <button (click)="deleteCrop(crop.id)" class="delete-button">Delete</button>
+    </div>
+</div>
+

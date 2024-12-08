@@ -1,0 +1,20 @@
+
+.shared-styles .body {
+    height: 88vh;
+    font-family: 'poppins';
+    background-color: rgba(71, 255, 194, 0);
+    display: flex;
+}
+
+.shared-styles .sidebar {
+    width: 17%;
+    height: 100vh;
+    background-color: rgba(220, 20, 60, 0);
+}
+
+.shared-styles .main {
+    width: 83%;
+    height: 90vh;
+    background-color: #F5F6F1;
+    padding: 10px 30px;
+}

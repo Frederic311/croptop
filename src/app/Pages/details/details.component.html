@@ -1,0 +1,29 @@
+<div class="body">
+<div class="top-container">
+    <div class="left-part">
+        <div class="import-button" (click)="showComponent('crops')">
+            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000">        <path d="M480-120q-117 0-198.5-81.5T200-400q0-94 55.5-168.5T401-669q-20-5-39-14.5T328-708q-33-33-42.5-78.5T281-879q47-5 92.5 4.5T452-832q23 23 33.5 52t13.5 61q13-31 31.5-58.5T572-828q11-11 28-11t28 11q11 11 11 28t-11 28q-22 22-39 48.5T564-667q88 28 142 101.5T760-400q0 117-81.5 198.5T480-120Zm0-80q83 0 141.5-58.5T680-400q0-83-58.5-141.5T480-600q-83 0-141.5 58.5T280-400q0 83 58.5 141.5T480-200Zm0-200Z"/>
+            </svg>
+            <p>Crops</p>
+        </div>
+        <div class="export-button" (click)="showComponent('harvest')">
+            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 100 100" width="24px" fill="#2B2F39">
+                <path d="M70 20 L50 50 L80 80"/>
+                <circle cx="50" cy="50" r="5" fill="#333"/>
+              </svg>
+            <p>Harvest</p>
+
+        </div>
+        <div class="export-button" (click)="showComponent('inventory')" >
+            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="19px" fill="#fff"><path d="M202.87-71.87q-37.78 0-64.39-26.61t-26.61-64.39V-612.2q-18.24-12.43-29.12-31.48-10.88-19.06-10.88-43.02v-110.43q0-37.78 26.61-64.39t64.39-26.61h634.26q37.78 0 64.39 26.61t26.61 64.39v110.43q0 23.96-10.88 43.02-10.88 19.05-29.12 31.48v449.33q0 37.78-26.61 64.39t-64.39 26.61H202.87Zm0-523.83v433.07h554.5V-595.7h-554.5Zm-40-91h634.5v-110.43h-634.5v110.43Zm193.06 292.44H604.3v-86.22H355.93v86.22Zm124.31 14.98Z"/></svg>
+            <p>Inventory</p>
+
+        </div>
+    </div>
+</div>
+<div class="table-container"> <app-crop-page *ngIf="selectedComponent === 'crops'">
+
+</app-crop-page> <app-harvest *ngIf="selectedComponent === 'harvest'">
+
+</app-harvest> <app-inventory *ngIf="selectedComponent === 'inventory'"></app-inventory> </div>
+</div>

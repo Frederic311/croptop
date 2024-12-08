@@ -1,0 +1,44 @@
+<div class="body">
+    <div class="dashboard" [ngClass]="{'active': activeItem === 'dashboard'}" (click)="navigateToDashboard()">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="24px" fill="##2B2F39">
+        <path d="M518.09-603.35v-251h336.26v251H518.09ZM105.65-433.78v-420.57h336.26v420.57H105.65Zm412.44 327.41v-420.56h336.26v420.56H518.09Zm-412.44 0v-251h336.26v251H105.65Zm91-418.41h154.26v-238.57H196.65v238.57Zm412.44 327.41h154.26v-238.56H609.09v238.56Zm0-496.98h154.26v-69H609.09v69ZM196.65-197.37h154.26v-69H196.65v69Zm154.26-327.41Zm258.18-169.57Zm0 258.42ZM350.91-266.37Z"/>
+      </svg>
+      <p>Dashboard</p>
+    </div>
+    <div *ngIf="!isLoggedIn"  class="crops" [ngClass]="{'active': activeItem === 'crop'}" (click)="navigateToCrop()">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="24px" fill="##2B2F39">
+        <path d="M480-120q-117 0-198.5-81.5T200-400q0-94 55.5-168.5T401-669q-20-5-39-14.5T328-708q-33-33-42.5-78.5T281-879q47-5 92.5 4.5T452-832q23 23 33.5 52t13.5 61q13-31 31.5-58.5T572-828q11-11 28-11t28 11q11 11 11 28t-11 28q-22 22-39 48.5T564-667q88 28 142 101.5T760-400q0 117-81.5 198.5T480-120Zm0-80q83 0 141.5-58.5T680-400q0-83-58.5-141.5T480-600q-83 0-141.5 58.5T280-400q0 83 58.5 141.5T480-200Zm0-200Z"/>
+      </svg>
+      <p>Crops</p>
+    </div>
+    <div *ngIf="!isLoggedIn" class="inventory" [ngClass]="{'active': activeItem === 'inventory'}" (click)="navigateToInventory()">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="24px" fill="##2B2F39">
+        <path d="M202.87-71.87q-37.78 0-64.39-26.61t-26.61-64.39V-612.2q-18.24-12.43-29.12-31.48-10.88-19.06-10.88-43.02v-110.43q0-37.78 26.61-64.39t64.39-26.61h634.26q37.78 0 64.39 26.61t26.61 64.39v110.43q0 23.96-10.88 43.02-10.88 19.05-29.12 31.48v449.33q0 37.78-26.61 64.39t-64.39 26.61H202.87Zm0-523.83v433.07h554.5V-595.7h-554.5Zm-40-91h634.5v-110.43h-634.5v110.43Zm193.06 292.44H604.3v-86.22H355.93v86.22Zm124.31 14.98Z"/>
+      </svg>
+      <p>Inventory</p>
+    </div>
+    <div *ngIf="!isLoggedIn" class="tasks" [ngClass]="{'active': activeItem === 'tasks'}" (click)="navigateToTasks()">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="24px" fill="##2B2F39">
+        <path d="m438-240 226-226-58-58-169 169-84-84-57 57 142 142ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/>
+      </svg>
+      <p>Tasks</p>
+    </div>
+    <div *ngIf="!isLoggedIn" class="users" [ngClass]="{'active': activeItem === 'harvest'}" (click)="navigateToHarvest()">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 100 100" width="24px" fill="#2B2F39">
+        <path d="M70 20 L50 50 L80 80"/>
+        <circle cx="50" cy="50" r="5" fill="#333"/>
+      </svg>
+      <p>Harvest</p>
+    </div>
+    <div class="users" [ngClass]="{'active': activeItem === 'farms'}" (click)="navigateToFarms()">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 100 100" width="24px" fill="#2B2F39">
+        <path d="M10 10 L90 10 L90 90 L10 90 Z" /> <path d="M40 20 L60 20 L60 40 L40 40 Z" /> <path d="M30 60 L70 60 L70 90 L30 90 Z" /> <path d="M50 50 L70 70" /> <path d="M70 70 L60 80 L70 90" /> </svg>
+      <p>Farms</p>
+    </div>
+    <div class="logout" [ngClass]="{'active': activeItem === 'logout'}" (click)="navigateToLogout()">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#2B2F39">
+        <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z"/>
+      </svg>
+      <p>Logout</p>
+    </div>
+  </div>

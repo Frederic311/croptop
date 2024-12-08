@@ -1,0 +1,1 @@
+<div [ngClass]="{'shared-styles': showSharedComponents()}"> <div *ngIf="showSharedComponents()"> <app-header></app-header> </div> <div class="body"> <div *ngIf="showSharedComponents()" class="sidebar"> <app-sidebar></app-sidebar> </div> <div class="main"> <router-outlet></router-outlet> <div *ngIf="showSharedComponents()"> <app-footer></app-footer> </div> </div> </div> </div>

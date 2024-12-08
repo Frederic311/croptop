@@ -1,0 +1,44 @@
+.body{
+    font-family: 'poppins';
+    height: 82vh;
+    padding-top: 55px;
+    padding-left: 30px;
+    position: relative;
+    div{
+        width: 220px;
+        height: 50px;
+        margin: 0px 0px 15px 0px;
+        padding-left: 30px;
+        display: flex;
+        justify-content: baseline;
+        align-items: center;
+        cursor: pointer;
+        /* background-color: white; */
+        p{
+            font-size: 12px;
+            padding-left: 15px;
+            font-weight: 500;
+        }
+    }
+    div:last-child{
+        position: absolute;
+        bottom: 2.5rem;
+    }
+    div:hover{
+        transform: scale(1.03);
+        transition: all 0.2s ease-in;
+        background-color: #F5F6F1;
+
+
+    }
+    .active{
+        background-color: #F5F6F1;
+        color: #096A67;
+        p{
+            font-weight: 600;
+        }
+        svg{
+            fill: #096A67;
+        }
+    }
+}

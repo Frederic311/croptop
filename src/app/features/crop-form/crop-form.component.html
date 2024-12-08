@@ -1,0 +1,42 @@
+<div class="crop-form-container">
+  <h2>{{ crop.id ? 'Edit Crop' : 'Create New Crop' }}</h2>
+  <form [formGroup]="cropForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="cropName">Crop Name</label>
+      <input
+        id="cropName"
+        type="text"
+        formControlName="cropName"
+        class="form-control"
+        placeholder="Enter crop name"
+      />
+      <div *ngIf="cropForm.get('cropName')?.invalid && cropForm.get('cropName')?.touched">
+        <small class="text-danger">Crop Name is required.</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="cropDescription">Description</label>
+      <textarea
+        id="cropDescription"
+        formControlName="cropDescription"
+        class="form-control"
+        placeholder="Enter crop description"
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="farm">Select Farm</label>
+      <select id="farm" formControlName="farm_id" class="form-control">
+        <option *ngFor="let farm of farms" [value]="farm.id">{{ farm.name }}</option>
+      </select>
+      <div *ngIf="cropForm.get('farmId')?.invalid && cropForm.get('farmId')?.touched">
+        <small class="text-danger">Selecting a farm is required.</small>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" >
+      {{ crop.id ? 'Update Crop' : 'Create Crop' }}
+    </button>
+  </form>
+</div> 

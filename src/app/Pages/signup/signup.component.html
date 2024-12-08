@@ -1,0 +1,35 @@
+<div class="signup-page">
+  <div class="signup-container">
+    <img alt="logo" class="logo" src="assets/logo.svg">
+    <h2>Join Us!!</h2>
+    <form   #signupForm="ngForm" (ngSubmit)="onSubmit()">
+     <!-- Reference ngModel for validation status -->
+<div class="form-group" [ngClass]="{'has-error': nameModel?.touched && nameModel?.invalid}">
+  <label for="name">Name:</label>
+  <input type="text" id="name" [(ngModel)]="name" name="name" #nameModel="ngModel" required>
+  <small *ngIf="nameModel?.touched && nameModel?.invalid" class="error-msg">Name is required.</small>
+</div>
+
+<div class="form-group" [ngClass]="{'has-error': emailModel?.touched && emailModel?.invalid}">
+  <label for="email">Email:</label>
+  <input type="email" id="email" [(ngModel)]="email" name="email" #emailModel="ngModel" required  (ngModelChange)="onEmailChange($event)"
+  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+  <small *ngIf="emailModel?.touched && emailModel?.invalid" class="error-msg">
+    {{ getEmailErrorMessage(emailModel) }}
+  </small>
+</div>
+
+<div class="form-group" [ngClass]="{'has-error': passwordModel?.touched && passwordModel?.invalid}">
+  <label for="password">Password:</label>
+  <input type="password" id="password" [(ngModel)]="password" name="password" #passwordModel="ngModel" required>
+  <small *ngIf="passwordModel?.touched && passwordModel?.invalid" class="error-msg">
+    Password must be at least 6 characters long.
+  </small>
+</div>
+
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+    <p class="link">Already have an account? <a routerLink="/login" (click)="navigateToLogin()">Login</a></p>
+  </div>
+  <p-toast></p-toast>
+</div>

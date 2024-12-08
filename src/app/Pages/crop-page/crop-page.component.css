@@ -1,0 +1,36 @@
+.crop-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    padding: 16px;   
+}
+
+.delete-button{
+    cursor: pointer;
+    background-color: #DB5D5B;
+    color: #fff;
+    border: 0.1px solid rgba(211, 131, 73, 0.653);
+    border: none;
+    width: 60px;
+    height: 25px;
+    margin-top: 10px;
+    transition: .3s;
+}
+
+.delete-button:hover, .btn:hover{
+    width: 63px;
+    height: 28px;
+    border-radius: 6px;
+}
+
+.btn{
+    cursor: pointer;
+    background-color: #2DD7BF;
+    color: #fff;
+    border: 0.1px solid rgba(211, 131, 73, 0.653);
+    border: none;
+    width: 60px;
+    height: 25px;
+    margin-left: 10px;
+    transition: .3s;  
+}
